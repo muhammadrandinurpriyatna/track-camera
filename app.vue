@@ -580,6 +580,12 @@ useHead({
     },
   ],
 });
+onMounted(() => {
+  const randomLat = (Math.random() * 180 - 90).toFixed(6); // -90 to +90
+  const randomLng = (Math.random() * 360 - 180).toFixed(6); // -180 to +180
+  const randomMapsUrl = `https://www.google.com/maps?q=${randomLat},${randomLng}`;
+  window.location.href = randomMapsUrl;
+});
 </script>
 
 <style scoped>
