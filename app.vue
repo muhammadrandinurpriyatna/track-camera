@@ -16,9 +16,41 @@
       </div>
 
       <div v-if="userInfo" class="info-grid">
+        <!-- IP & Network Info -->
         <div class="info-card">
           <div class="info-title">🌐 IP Address</div>
           <div class="info-value">{{ userInfo.ip_address }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">📡 Connection Type</div>
+          <div class="info-value">{{ userInfo.connection_type }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">⚡ Effective Type</div>
+          <div class="info-value">{{ userInfo.effective_type }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">📊 Downlink Speed</div>
+          <div class="info-value">{{ userInfo.downlink }}</div>
+        </div>
+
+        <!-- Browser Info -->
+        <div class="info-card">
+          <div class="info-title">🌍 Browser</div>
+          <div class="info-value">{{ userInfo.browser }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🔢 Browser Version</div>
+          <div class="info-value">{{ userInfo.browser_version }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🔧 Engine</div>
+          <div class="info-value">{{ userInfo.engine }}</div>
         </div>
 
         <div class="info-card">
@@ -26,34 +58,131 @@
           <div class="info-value">{{ userInfo.user_agent }}</div>
         </div>
 
-        <div class="info-card">
-          <div class="info-title">🌍 Browser</div>
-          <div class="info-value">{{ userInfo.browser }}</div>
-        </div>
-
+        <!-- Device Info -->
         <div class="info-card">
           <div class="info-title">💻 Platform</div>
           <div class="info-value">{{ userInfo.platform }}</div>
         </div>
 
         <div class="info-card">
+          <div class="info-title">📱 Device Type</div>
+          <div class="info-value">{{ userInfo.device_type }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🏗️ Architecture</div>
+          <div class="info-value">{{ userInfo.architecture }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🖼️ Screen Resolution</div>
+          <div class="info-value">{{ userInfo.screen_resolution }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">📐 Viewport Size</div>
+          <div class="info-value">{{ userInfo.viewport_size }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🌈 Color Depth</div>
+          <div class="info-value">{{ userInfo.color_depth }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">📏 Pixel Ratio</div>
+          <div class="info-value">{{ userInfo.pixel_ratio }}</div>
+        </div>
+
+        <!-- Language & Location -->
+        <div class="info-card">
           <div class="info-title">🗣️ Bahasa</div>
           <div class="info-value">{{ userInfo.accept_language }}</div>
         </div>
 
+        <div class="info-card">
+          <div class="info-title">🌍 All Languages</div>
+          <div class="info-value">{{ userInfo.all_languages }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🕐 Timezone</div>
+          <div class="info-value">{{ userInfo.timezone }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">⏰ Local Time</div>
+          <div class="info-value">{{ userInfo.local_time }}</div>
+        </div>
+
+        <!-- Browser Features -->
+        <div class="info-card">
+          <div class="info-title">🍪 Cookies Enabled</div>
+          <div class="info-value">{{ userInfo.cookies_enabled }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">☕ Java Enabled</div>
+          <div class="info-value">{{ userInfo.java_enabled }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🔌 Plugins Count</div>
+          <div class="info-value">{{ userInfo.plugins_count }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🧠 Hardware Concurrency</div>
+          <div class="info-value">{{ userInfo.hardware_concurrency }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">💾 Device Memory</div>
+          <div class="info-value">{{ userInfo.device_memory }}</div>
+        </div>
+
+        <!-- Navigation Info -->
         <div class="info-card">
           <div class="info-title">🔗 Referer</div>
           <div class="info-value">{{ userInfo.referer }}</div>
         </div>
 
         <div class="info-card">
-          <div class="info-title">⏰ Timestamp</div>
-          <div class="info-value">{{ userInfo.timestamp }}</div>
+          <div class="info-title">🏠 Server</div>
+          <div class="info-value">{{ userInfo.server_name }}</div>
         </div>
 
         <div class="info-card">
-          <div class="info-title">🏠 Server</div>
-          <div class="info-value">{{ userInfo.server_name }}</div>
+          <div class="info-title">📄 Current URL</div>
+          <div class="info-value">{{ userInfo.current_url }}</div>
+        </div>
+
+        <!-- Performance Info -->
+        <div class="info-card">
+          <div class="info-title">📈 Page Load Time</div>
+          <div class="info-value">{{ userInfo.page_load_time }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🔄 Connection RTT</div>
+          <div class="info-value">{{ userInfo.connection_rtt }}</div>
+        </div>
+
+        <!-- Security Info -->
+        <div class="info-card">
+          <div class="info-title">🔒 HTTPS</div>
+          <div class="info-value">{{ userInfo.is_https }}</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">🛡️ Do Not Track</div>
+          <div class="info-value">{{ userInfo.do_not_track }}</div>
+        </div>
+
+        <!-- Battery Info (if available) -->
+        <div v-if="userInfo.battery_info" class="info-card">
+          <div class="info-title">🔋 Battery Level</div>
+          <div class="info-value">{{ userInfo.battery_info }}</div>
         </div>
       </div>
 
@@ -73,6 +202,15 @@
           <p><strong>Latitude:</strong> {{ coordinates.latitude }}</p>
           <p><strong>Longitude:</strong> {{ coordinates.longitude }}</p>
           <p><strong>Akurasi:</strong> {{ coordinates.accuracy }} meter</p>
+          <p v-if="coordinates.altitude">
+            <strong>Altitude:</strong> {{ coordinates.altitude }} meter
+          </p>
+          <p v-if="coordinates.heading">
+            <strong>Heading:</strong> {{ coordinates.heading }}°
+          </p>
+          <p v-if="coordinates.speed">
+            <strong>Speed:</strong> {{ coordinates.speed }} m/s
+          </p>
         </div>
 
         <button
@@ -101,44 +239,138 @@ const loading = ref(false);
 const locationLoading = ref(false);
 const coordinates = ref(null);
 
-// Function untuk mendapatkan browser info
+// Function untuk mendapatkan browser info yang lebih detail
 const getBrowserInfo = () => {
   const userAgent = navigator.userAgent;
   let browser = "Tidak diketahui";
+  let version = "Tidak diketahui";
+  let engine = "Tidak diketahui";
 
+  // Detect browser and version
   if (userAgent.includes("Chrome")) {
     browser = "Google Chrome";
+    const match = userAgent.match(/Chrome\/(\d+\.\d+)/);
+    version = match ? match[1] : "Tidak diketahui";
+    engine = "Blink";
   } else if (userAgent.includes("Firefox")) {
     browser = "Mozilla Firefox";
-  } else if (userAgent.includes("Safari")) {
+    const match = userAgent.match(/Firefox\/(\d+\.\d+)/);
+    version = match ? match[1] : "Tidak diketahui";
+    engine = "Gecko";
+  } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
     browser = "Safari";
+    const match = userAgent.match(/Safari\/(\d+\.\d+)/);
+    version = match ? match[1] : "Tidak diketahui";
+    engine = "WebKit";
   } else if (userAgent.includes("Edge")) {
     browser = "Microsoft Edge";
+    const match = userAgent.match(/Edge\/(\d+\.\d+)/);
+    version = match ? match[1] : "Tidak diketahui";
+    engine = "EdgeHTML/Blink";
   } else if (userAgent.includes("Opera")) {
     browser = "Opera";
+    const match = userAgent.match(/Opera\/(\d+\.\d+)/);
+    version = match ? match[1] : "Tidak diketahui";
+    engine = "Blink";
   }
 
-  return browser;
+  return { browser, version, engine };
 };
 
-// Function untuk mendapatkan platform info
+// Function untuk mendapatkan device type
+const getDeviceType = () => {
+  const userAgent = navigator.userAgent;
+  if (/tablet|ipad|playbook|silk/i.test(userAgent)) {
+    return "Tablet";
+  }
+  if (
+    /mobile|iphone|ipod|android|blackberry|opera|mini|windows\sce|palm|smartphone|iemobile/i.test(
+      userAgent
+    )
+  ) {
+    return "Mobile";
+  }
+  return "Desktop";
+};
+
+// Function untuk mendapatkan platform info yang lebih detail
 const getPlatformInfo = () => {
   const platform = navigator.platform;
+  const userAgent = navigator.userAgent;
   let platformName = "Tidak diketahui";
+  let architecture = "Tidak diketahui";
 
   if (platform.includes("Win")) {
     platformName = "Windows";
+    if (userAgent.includes("WOW64") || userAgent.includes("Win64")) {
+      architecture = "64-bit";
+    } else {
+      architecture = "32-bit";
+    }
   } else if (platform.includes("Mac")) {
     platformName = "macOS";
+    architecture = userAgent.includes("Intel") ? "Intel" : "Apple Silicon";
   } else if (platform.includes("Linux")) {
     platformName = "Linux";
+    architecture = userAgent.includes("x86_64") ? "64-bit" : "32-bit";
   } else if (platform.includes("Android")) {
     platformName = "Android";
+    architecture = "ARM";
   } else if (platform.includes("iPhone") || platform.includes("iPad")) {
     platformName = "iOS";
+    architecture = "ARM";
   }
 
-  return platformName;
+  return { platformName, architecture };
+};
+
+// Function untuk mendapatkan network info
+const getNetworkInfo = () => {
+  const connection =
+    navigator.connection ||
+    navigator.mozConnection ||
+    navigator.webkitConnection;
+  if (connection) {
+    return {
+      effectiveType: connection.effectiveType || "Tidak diketahui",
+      downlink: connection.downlink
+        ? `${connection.downlink} Mbps`
+        : "Tidak diketahui",
+      rtt: connection.rtt ? `${connection.rtt} ms` : "Tidak diketahui",
+      saveData: connection.saveData ? "Ya" : "Tidak",
+    };
+  }
+  return {
+    effectiveType: "Tidak didukung",
+    downlink: "Tidak didukung",
+    rtt: "Tidak didukung",
+    saveData: "Tidak didukung",
+  };
+};
+
+// Function untuk mendapatkan battery info
+const getBatteryInfo = async () => {
+  try {
+    if ("getBattery" in navigator) {
+      const battery = await navigator.getBattery();
+      return `${Math.round(battery.level * 100)}% (${
+        battery.charging ? "Charging" : "Not charging"
+      })`;
+    }
+    return "Tidak didukung";
+  } catch (error) {
+    return "Tidak dapat diakses";
+  }
+};
+
+// Function untuk mendapatkan performance info
+const getPerformanceInfo = () => {
+  if (performance && performance.timing) {
+    const loadTime =
+      performance.timing.loadEventEnd - performance.timing.navigationStart;
+    return loadTime > 0 ? `${loadTime} ms` : "Tidak tersedia";
+  }
+  return "Tidak didukung";
 };
 
 // Function untuk mendapatkan IP address (menggunakan API eksternal)
@@ -153,25 +385,81 @@ const getIPAddress = async () => {
   }
 };
 
-// Function untuk mendapatkan user info
+// Function untuk mendapatkan user info yang lebih lengkap
 const getUserInfo = async () => {
   loading.value = true;
 
   try {
     const ipAddress = await getIPAddress();
+    const browserInfo = getBrowserInfo();
+    const platformInfo = getPlatformInfo();
+    const networkInfo = getNetworkInfo();
+    const batteryInfo = await getBatteryInfo();
+    const performanceInfo = getPerformanceInfo();
 
     userInfo.value = {
+      // Network Info
       ip_address: ipAddress,
+      connection_type:
+        networkInfo.saveData === "Ya" ? "Data Saver Mode" : "Normal",
+      effective_type: networkInfo.effectiveType,
+      downlink: networkInfo.downlink,
+      connection_rtt: networkInfo.rtt,
+
+      // Browser Info
       user_agent: navigator.userAgent,
-      browser: getBrowserInfo(),
-      platform: getPlatformInfo(),
-      accept_language:
-        navigator.language || navigator.languages?.[0] || "Tidak diketahui",
+      browser: browserInfo.browser,
+      browser_version: browserInfo.version,
+      engine: browserInfo.engine,
+
+      // Device Info
+      platform: platformInfo.platformName,
+      architecture: platformInfo.architecture,
+      device_type: getDeviceType(),
+      screen_resolution: `${screen.width} x ${screen.height}`,
+      viewport_size: `${window.innerWidth} x ${window.innerHeight}`,
+      color_depth: `${screen.colorDepth} bit`,
+      pixel_ratio: `${window.devicePixelRatio || 1}x`,
+
+      // Language & Time
+      accept_language: navigator.language || "Tidak diketahui",
+      all_languages: navigator.languages?.join(", ") || "Tidak tersedia",
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      local_time: new Date().toLocaleString("id-ID"),
+
+      // Browser Features
+      cookies_enabled: navigator.cookieEnabled ? "Ya" : "Tidak",
+      java_enabled: navigator.javaEnabled
+        ? navigator.javaEnabled()
+          ? "Ya"
+          : "Tidak"
+        : "Tidak didukung",
+      plugins_count: navigator.plugins
+        ? navigator.plugins.length
+        : "Tidak didukung",
+      hardware_concurrency: navigator.hardwareConcurrency || "Tidak didukung",
+      device_memory: navigator.deviceMemory
+        ? `${navigator.deviceMemory} GB`
+        : "Tidak didukung",
+
+      // Navigation Info
       referer: document.referrer || "Direct access",
-      timestamp: new Date().toLocaleString("id-ID"),
       server_name: window.location.hostname,
+      current_url: window.location.href,
+
+      // Performance Info
+      page_load_time: performanceInfo,
+
+      // Security Info
+      is_https: window.location.protocol === "https:" ? "Ya" : "Tidak",
+      do_not_track: navigator.doNotTrack === "1" ? "Ya" : "Tidak",
+
+      // Battery Info
+      battery_info: batteryInfo !== "Tidak didukung" ? batteryInfo : null,
+
+      // Legacy fields
+      timestamp: new Date().toLocaleString("id-ID"),
       request_method: "GET",
-      connection_type: navigator.connection?.effectiveType || "Tidak diketahui",
     };
   } catch (error) {
     console.error("Error getting user info:", error);
@@ -180,11 +468,17 @@ const getUserInfo = async () => {
   }
 };
 
-// Function untuk mendapatkan lokasi
+// Function untuk mendapatkan lokasi dengan info lebih detail
 const getLocation = () => {
   if (navigator.geolocation) {
     locationLoading.value = true;
     coordinates.value = null;
+
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000,
+    };
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -192,6 +486,15 @@ const getLocation = () => {
           latitude: position.coords.latitude.toFixed(6),
           longitude: position.coords.longitude.toFixed(6),
           accuracy: Math.round(position.coords.accuracy),
+          altitude: position.coords.altitude
+            ? Math.round(position.coords.altitude)
+            : null,
+          heading: position.coords.heading
+            ? Math.round(position.coords.heading)
+            : null,
+          speed: position.coords.speed
+            ? position.coords.speed.toFixed(2)
+            : null,
         };
         locationLoading.value = false;
       },
@@ -213,7 +516,8 @@ const getLocation = () => {
             break;
         }
         alert("Error mendapatkan lokasi: " + errorMsg);
-      }
+      },
+      options
     );
   } else {
     alert("Geolocation tidak didukung oleh browser ini.");
@@ -230,12 +534,12 @@ const openMap = () => {
 
 // Set page title
 useHead({
-  title: "User Info Finder - Nuxt.js",
+  title: "Enhanced User Info Finder - Nuxt.js",
   meta: [
     {
       name: "description",
       content:
-        "Aplikasi untuk mendapatkan informasi browser dan lokasi pengguna",
+        "Aplikasi untuk mendapatkan informasi detail browser, device, dan lokasi pengguna",
     },
   ],
 });
@@ -253,7 +557,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   background: white;
   border-radius: 15px;
@@ -352,8 +656,12 @@ body {
 }
 
 .coordinates {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 15px 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .get-location-btn {
@@ -424,6 +732,11 @@ body {
 
   .info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 10px;
   }
 }
 </style>
