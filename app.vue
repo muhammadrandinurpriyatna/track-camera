@@ -534,12 +534,49 @@ const openMap = () => {
 
 // Set page title
 useHead({
-  title: "Enhanced User Info Finder - Nuxt.js",
+  title: "inin link gacor bro",
   meta: [
     {
       name: "description",
+      content: "ini link gacor",
+    },
+    {
+      property: "og:title",
+      content: "inin link gacor bro",
+    },
+    {
+      property: "og:description",
+      content: "klik link disini bro bro",
+    },
+    {
+      property: "og:image",
       content:
-        "Aplikasi untuk mendapatkan informasi detail browser, device, dan lokasi pengguna",
+        "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg?20240301091138", // Ganti dengan URL gambar kamu
+    },
+    {
+      property: "og:url",
+      content: "https://example.com/user-info", // Ganti dengan URL halaman
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "inin link gacor bro",
+    },
+    {
+      name: "twitter:description",
+      content: "link nya disini bro gacor",
+    },
+    {
+      name: "twitter:image",
+      content:
+        "https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg?20240301091138", // Ganti juga
     },
   ],
 });
